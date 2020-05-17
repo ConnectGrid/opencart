@@ -31,9 +31,9 @@ class ControllerInstallStep3 extends Controller {
 
             $cfg['OPENCART_SERVER'] = 'https://www.opencart.com/';
 
-            $file = '';
+            $file = '<?php' . PHP_EOL . PHP_EOL;
             foreach ($cfg as $k => $v) {
-                 $file .= "const {$k} = '{$v}';".PHP_EOL;
+                 $file .= "const {$k} = '{$v}';" . PHP_EOL;
             }
 
             // write config file
