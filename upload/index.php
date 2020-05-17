@@ -2,9 +2,9 @@
 // Version
 define('VERSION', '3.0.3.3');
 
-// Configuration
-define ('OPENCART_CONFIG_FILE', "{$_SERVER['DOCUMENT_ROOT']}/../opencart-config.php");
-define ('OPENCART_ADMIN_CONFIG_FILE', "{$_SERVER['DOCUMENT_ROOT']}/../opencart-admin-config.php");
+// Configuration Files
+define ('OPENCART_CONFIG_FILE',       "{$_SERVER['DOCUMENT_ROOT']}/../opencart/config.php");
+define ('OPENCART_ADMIN_CONFIG_FILE', "{$_SERVER['DOCUMENT_ROOT']}/../opencart/admin-config.php");
 
 if (is_file(OPENCART_CONFIG_FILE)) {
 	require_once OPENCART_CONFIG_FILE;
