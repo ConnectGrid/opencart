@@ -255,12 +255,12 @@ class ControllerInstallStep3 extends Controller {
 			$this->error['email'] = $this->language->get('error_email');
 		}
 
-		if (!is_writable(DIR_OPENCART . 'config.php')) {
-			$this->error['warning'] = $this->language->get('error_config') . DIR_OPENCART . 'config.php!';
+		if (!is_writable(OPENCART_CONFIG_FILE)) {
+			$this->error['warning'] = $this->language->get('error_config') . OPENCART_CONFIG_FILE . '!';
 		}
 
-		if (!is_writable(DIR_OPENCART . 'admin/config.php')) {
-			$this->error['warning'] = $this->language->get('error_config') . DIR_OPENCART . 'admin/config.php!';
+		if (!is_writable(OPENCART_ADMIN_CONFIG_FILE)) {
+			$this->error['warning'] = $this->language->get('error_config') . OPENCART_ADMIN_CONFIG_FILE . '!';
 		}
 
 		return !$this->error;
