@@ -21,8 +21,8 @@ define ('OPENCART_ADMIN_CONFIG_FILE', "{$_SERVER['DOCUMENT_ROOT']}/../opencart-a
 define('DIR_OPENCART',     dirname(__DIR__).'/');       //str_replace('\\', '/', realpath(dirname(__FILE__) . '/../') . '/'));
 define('DIR_APPLICATION',  __DIR__.'/');                //str_replace('\\', '/', realpath(dirname(__FILE__))) . '/');
 define('DIR_SYSTEM',       dirname(DIR_APPLICATION).'/system/');  // str_replace('\\', '/', realpath(dirname(__FILE__) . '/../')) . '/system/');
-define('DIR_STORAGE',      "{$_SERVER['DOCUMENT_ROOT']}/../opencart-storage/");    // DIR_SYSTEM.'storage/');
-define('DIR_IMAGE',        DIR_STORAGE.'../opencart-image/');                      // str_replace('\\', '/', realpath(dirname(__FILE__) . '/../')) . '/image/');
+define('DIR_STORAGE',      realpath("{$_SERVER['DOCUMENT_ROOT']}/../opencart-storage").'/');    // DIR_SYSTEM.'storage/');
+define('DIR_IMAGE',        realpath(DIR_STORAGE.'../opencart-image').'/');                      // str_replace('\\', '/', realpath(dirname(__FILE__) . '/../')) . '/image/');
 define('DIR_LANGUAGE',     DIR_APPLICATION . 'language/');
 define('DIR_TEMPLATE',     DIR_APPLICATION . 'view/template/');
 define('DIR_DATABASE',     DIR_SYSTEM . 'database/');

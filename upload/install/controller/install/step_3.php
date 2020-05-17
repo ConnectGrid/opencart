@@ -13,6 +13,9 @@ class ControllerInstallStep3 extends Controller {
             // build config array
             $cfg = [];
 
+            $cfg['HTTP_SERVER']  = "{$_SERVER['DOCUMENT_ROOT']}/store";
+            $cfg['HTTPS_SERVER'] = "{$_SERVER['DOCUMENT_ROOT']}/store";
+            
             // directories
             foreach (['DIR_APPLICATION', 'DIR_SYSTEM', 'DIR_IMAGE', 'DIR_STORAGE', 'DIR_LANGUAGE',
                       'DIR_TEMPLATE', 'DIR_CONFIG', 'DIR_CACHE', 'DIR_DOWNLOAD', 'DIR_LOGS',
